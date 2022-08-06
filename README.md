@@ -49,18 +49,18 @@ terraform state show <instatce’s_name>
   variables.tf
 ______________
 variable “ami_id” { 
-type = string
-default = "default value" 
-description = "some description" 
+  type = string
+  default = "default value" 
+  description = "some description" 
 }
   ```
  ```sh
   example
 ______________
 variable “ami_id” { 
-type = string 
-default = "AMI_ID" 
-description = "ID of the AMI to be used. For example ami-02354e95b39ca8dec" 
+  type = string 
+  default = "AMI_ID" 
+  description = "ID of the AMI to be used. For example ami-02354e95b39ca8dec" 
 }
 
   ```
@@ -73,6 +73,51 @@ terraform.tfvars.json
 *.auto.tfvars.json
 - var as CLI arguments
 -var-file as CLI arguments
-  ``` 
+  ```
   
-## _Main commands_
+Передача значения переменной через CLI
+terraform plan -var 'ami_id=ami-02354e95b39ca8dec' 
+terraform apply -var 'ami_id=ami-02354e95b39ca8dec'
+
+  
+## _Data Sources_
+```sh
+Синтаксис
+data “<type>” “<local_name>” {
+	<argument> = <value>
+	<argument> = <value>
+}
+  ```
+    
+  ```sh
+Example
+Добавим в main.tf (или datasources.tf)
+
+data "aws_ami" "amzn-ami" {
+ most_recent = true
+ owners = ["amazon"]
+ filter {
+ name = "name"
+ values = ["amzn2-ami-*-gp2"]
+ }
+ filter {
+ name = "virtualization-type"
+ values = [
+ "hvm"]
+ } 
+ filter {
+ name = "architecture"
+ values = ["x86_64"]
+ }
+}
+
+resource "aws_instance" "alpha" {
+   ami = data.aws_ami.amzn-ami.image_id
+   instance_type = "t2.micro"
+   tags = {
+ 	Name = "Quickstart-alpha"
+ 	Purpose = "Education"
+ }
+}
+
+  ```
