@@ -129,6 +129,7 @@ output "<name>" {
  description = "some description"
  sensitive = true / false
 }
+  ```		
 ```sh
 Example
 Добавим в main.tf (или outputs.tf)
