@@ -121,3 +121,24 @@ resource "aws_instance" "alpha" {
 }
 
   ```
+## _Outputs_
+```sh
+Синтаксис
+output "<name>" {
+ value = <expression>
+ description = "some description"
+ sensitive = true / false
+}
+```sh
+Example
+Добавим в main.tf (или outputs.tf)
+
+output "instance_id" {
+ value = aws_instance.alpha.id
+ description = "ID of created instance"
+}
+output "instance_public_ip" {
+ value = aws_instance.alpha.public_ip
+ description = "Public IP"
+}
+  ```
