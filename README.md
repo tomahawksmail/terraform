@@ -31,3 +31,25 @@ aws_secret_access_key = wJa**************EY2
 - terraform apply
 
   [Использование разных AWS профилей для бэкенда и деплоя](https://notessysadmin.com/terraform-different-aws-profiles-for-s3-backend-and-environment)
+  
+## _Main commands_
+terraform validate
+terraform fmt
+terraform plan
+terraform apply
+terraform apply –auto-approve
+
+terraform show
+terraform state
+terraform state list
+terraform state show <instatce’s_name>
+
+# _VARIABLE_
+  ```sh
+  variables.tf
+variable “ami_id” { 
+type = string
+default = "default value" 
+description = "some description" 
+}
+  ```
