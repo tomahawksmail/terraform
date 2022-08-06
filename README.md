@@ -7,13 +7,13 @@
 - sudo mv terraform***.zip /bin/
 
 ## _Credentials for AWS_
-> Create AWS user with Programmatic access and Administrator's permissions (Access key & Secret key)
-> Credentials file ~/.aws/credentials
-> or export env
-> export AWS_ACCESS_KEY_ID=MyAccesskey
-> export AWS_SECRET_ACCESS_KEY=Mysecretkey
-> or export aws profile
-> export AWS_PROFILE=remote_state_profile
+- Create AWS user with Programmatic access and Administrator's permissions (Access key & Secret key)
+- Credentials file ~/.aws/credentials
+- or export env
+- export AWS_ACCESS_KEY_ID=MyAccesskey
+- export AWS_SECRET_ACCESS_KEY=Mysecretkey
+- or export aws profile
+- export AWS_PROFILE=remote_state_profile
 
 ```sh
 [remote_state_profile]
