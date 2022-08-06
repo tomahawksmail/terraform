@@ -14,15 +14,14 @@
 - export AWS_SECRET_ACCESS_KEY=Mysecretkey
 - or export aws profile
 - export AWS_PROFILE=remote_state_profile
-
-```sh
 as example
+```sh
 [remote_state_profile]
-aws_access_key_id = AKI*************LE1
-aws_secret_access_key = wJa**************PLEKEY1
+aws_access_key_id     = AKI**************LE1
+aws_secret_access_key = wJa**************EY1
 [environment_profile]
-aws_access_key_id = AKIAI**********AMPLE2
-aws_secret_access_key = wJalrXU**************iCYEXAMPLEKEY2
+aws_access_key_id     = AKI**************LE2
+aws_secret_access_key = wJa**************EY2
 ```
 
 ## _Create a new project_
