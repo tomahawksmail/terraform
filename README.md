@@ -30,4 +30,4 @@ aws_secret_access_key = wJa**************EY2
 - terraform plan
 - terraform apply
 
-
+  [Использование разных AWS профилей для бэкенда и деплоя](https://notessysadmin.com/terraform-different-aws-profiles-for-s3-backend-and-environment)
