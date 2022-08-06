@@ -44,12 +44,35 @@ terraform state
 terraform state list
 terraform state show <instatce’s_name>
 
-# _VARIABLE_
+## _Variables_
   ```sh
   variables.tf
+______________
 variable “ami_id” { 
 type = string
 default = "default value" 
 description = "some description" 
 }
   ```
+ ```sh
+  example
+______________
+variable “ami_id” { 
+type = string 
+default = "AMI_ID" 
+description = "ID of the AMI to be used. For example ami-02354e95b39ca8dec" 
+}
+
+  ```
+ ```sh
+  Вариант объявление переменных и их приоритетность снизу вверх
+
+terraform.tfvars
+terraform.tfvars.json
+*.auto.tfvars
+*.auto.tfvars.json
+- var as CLI arguments
+-var-file as CLI arguments
+  ``` 
+  
+## _Main commands_
