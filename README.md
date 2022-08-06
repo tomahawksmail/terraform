@@ -16,12 +16,13 @@
 - export AWS_PROFILE=remote_state_profile
 
 ```sh
+as example
 [remote_state_profile]
-aws_access_key_id = AKIAIOSFODNN7EXAMPLE1
-aws_secret_access_key = wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY1
+aws_access_key_id = AKI*************LE1
+aws_secret_access_key = wJa**************PLEKEY1
 [environment_profile]
-aws_access_key_id = AKIAIOSFODNN7EXAMPLE2
-aws_secret_access_key = wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY2
+aws_access_key_id = AKIAI**********AMPLE2
+aws_secret_access_key = wJalrXU**************iCYEXAMPLEKEY2
 ```
 
 ## _Create a new project_
