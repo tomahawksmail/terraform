@@ -155,3 +155,18 @@ dynamic "ingress" {
     }
   }
  ```		
+## _lifecycles_
+  ```sh
+# Запретить уничтожение через Terraform
+lifecycle {
+    prevent_destroy = true
+  }
+# Запретить уничтожение и создание заного, при замене, например, ami или user_data
+lifecycle {
+    ignote_changes = ["ami", "user_data"]
+  }
+# Создать перед удалением
+lifecycle {
+    create_before_destroy = true
+  }
+  ```
